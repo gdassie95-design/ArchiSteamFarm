@@ -1,0 +1,12 @@
+services:
+  - type: worker
+    name: asf-steam-hours
+    runtime: image
+    image:
+      url: ghcr.io/justarchinet/archisteamfarm:6.3.11.0
+    region: ohio
+    plan: 0.5c-512mb
+    disk:
+      name: asf-data
+      mountPath: /app/config
+      sizeGB: 1
